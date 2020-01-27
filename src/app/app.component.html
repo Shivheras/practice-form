@@ -1,5 +1,5 @@
 
-      <form [formGroup]="userFormGroup" >
+      <form>
         <div class="container"  class="form-group">
             <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
         <table >
@@ -12,7 +12,7 @@
                 <td>Full name</td>
                 <td>:</td>
                 <td>
-                    <input type="text" id="fullName" autofocus="true"  class="form-control"formControlName="fullName" /><br><p id="demo"></p>                    
+                    <input type="text" id="fullName" autofocus="true"  class="form-control"[(ngModel)]="user.fullName" name="fullName" /><br><p id="demo"></p>                    
                 </td>
                 <td style="font-size: 12px;">Enter your first name & last name<br/>
                     Eg. Sameer Bhagwat</td>
@@ -21,7 +21,7 @@
                 <td>Choose a Rediffmail ID</td>
                 <td>:</td>
                 <td>
-                    <input type="text" id="mailId"  class="form-control"formControlName="mail"/>
+                    <input type="text" id="mailId"  class="form-control"formControlName="mail"[(ngModel)]="user.mailId" name="mailId"/>
                 </td>
                 <td>@rediffmail.com</td>
             </tr>
