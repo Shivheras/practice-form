@@ -1,0 +1,172 @@
+
+      <form [formGroup]="userFormGroup" >
+        <div class="container" >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+        <table align="center">
+            <tr>
+                <td colspan="4">
+                    <h2>Create a Rediffmail account</h2>
+                </td>                
+            </tr>
+            <tr> 
+                <td>Full name</td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="fullName" autofocus="true"  class="form-control"formControlName="fullName" /><br><p id="demo"></p>                    
+                </td>
+                <td style="font-size: 12px;">Enter your first name & last name<br/>
+                    Eg. Sameer Bhagwat</td>
+            </tr>
+            <tr>
+                <td>Choose a Rediffmail ID</td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="mailId"  class="form-control"formControlName="mail"/>
+                </td>
+                <td>@rediffmail.com</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>                
+                <td colspan="2">
+                    <input type="button" id="checkAvail" value="Check Availability" />
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="passWord" class="form-control" formControlName="password" />
+                </td>
+                <td rowspan="2" style="font-size: 12px;">Password:<br>
+                    • must contain 6-12 characters<br>                    
+                    • must contain both upper and lower case characters<br/>
+                    • must contain numeric characters<br/>
+                    • must contain special characters<br/>
+                    • should not contain username or firstname or lastname
+                </td>
+            </tr>
+            <tr>
+                <td>Retype password</td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="rePassWord"  class="form-control" formControlName="rePassWord"/>
+                </td>                
+            </tr>
+            <tr>
+                <td>Aletrnate Email Address</td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="email" class="form-control" formControlName="email"/>
+                </td>
+                <td style="font-size: 12px;">If you forget your password,<br/>
+                    we will send it to this account.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="checkbox" id="eID" style="font-size: 12px;" /> Click if you don't have an alternate ID
+                </td>
+            </tr>
+             <tr>
+                <td>Mobile No.</td>
+                <td>:</td>
+                <td>
+                    <select id="countryCode">
+                        <option>India (+91)</option>
+                        <option>Australia (+61)</option>
+                        <option>Brazil (+55)</option>
+                        <option>Cuba (+53)</option>
+                        <option>Canada (+1)</option>                        
+                        <option>Kenya (+254)</option>
+                        <option>Maldives (+960)</option>
+                    </select>
+                    <input type="number" id="mobNo" />                    
+                </td>
+                <td style="font-size: 12px;">If you forget your password,<br/>
+                    recover your password via text message.
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td>:</td>
+                <td>
+                    <select id="month">
+                       <option>Birth Month</option>
+                        <option>Jan</option>
+                        <option>Feb</option>
+                        <option>Mar</option>
+                        <option>Apr</option>
+                        <option>May</option>
+                        <option>Jun</option>
+                        <option>Jul</option>
+                        <option>Aug</option>
+                        <option>Sept</option>
+                        <option>Oct</option> 
+                        <option>Nov</option>
+                        <option>Dec</option>
+                    </select>
+                    <select id="day">                
+                    </select>                    
+                    <select id="year">                     
+                    </select>
+                </td>
+                <td style="font-size: 10px;">If you forget your password,
+                    we will send it to this account.
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>:</td>
+                <td colspan="2">
+                    <input type="radio" id="male" name="gender" /> Male
+                    <input type="radio" id="female" name="gender"  /> Female
+                </td>
+            </tr>
+            <tr>
+                <td>I live in Country</td>
+                <td>:</td>
+                <td colspan="2">
+                    <select id="country">
+                        <option>India </option>
+                        <option>Australia</option>
+                        <option>Brazil</option>
+                        <option>Cuba</option>
+                        <option>Canada </option>                        
+                        <option>Kenya</option>
+                        <option>Maldives</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="cityRow" >
+                <td>City</td>
+                <td>:</td>
+                <td colspan="2">
+                    <select id="city">
+                        <option>Select</option>
+                        <option>Ahmedabad </option>
+                        <option>Surat</option>
+                        <option>Bombay</option>
+                        <option>Kutch</option>
+                        <option>Gandhinagar </option>                        
+                        <option>Daman</option>
+                        <option>Dive</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>                
+                <td colspan="2">
+                    <div class="form-group">
+                        <br>
+                            <button type="button" class="btn btn-primary"  formControlName="submit"data-toggle="button" aria-pressed="false" (click)="submit()">
+                             Continue
+                                </button>
+
+                        </div>                                    
+                </td>
+            </tr>
+            <span id="demo"></span>
+        </table>
+    </div>
+      </form>
